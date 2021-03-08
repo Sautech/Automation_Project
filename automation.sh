@@ -7,7 +7,7 @@ sudo systemctl start apache2
 timestamp=$(date '+%d%m%Y-%H%M%S')
 myname=Saurabh
  tar -zcvf /tmp/${myname}-httpd-logs-${timestamp}.tar  /var/log/apache2/access.log /var/log/apache2/error.log
- sudo apt install awscli
+ sudo apt install awscli -y
 s3_bucket=upgrad-saurabh
  aws s3 \
 	 cp /tmp/${myname}-httpd-logs-${timestamp}.tar \
